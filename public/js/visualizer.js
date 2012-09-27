@@ -9,14 +9,14 @@ $(document).ready(function() {
   		$.each(data, function(i, waypoint) {
   			if (waypoint.feature == "node") {
 
-  				var circle = paper.circle(waypoint.x + offset, waypoint.y + offset, 30);
+  				var circle = paper.circle((waypoint.x*8) + offset, (waypoint.y*8) + offset, 15);
   				circle.attr("fill", "#5BB75B");
-  				circle.attr("stroke", "#fff");  				
+  				circle.attr("stroke", "#5BB75B");  				
   				//console.log("Node: " + waypoint.x);
   			} else {
-  				var circle = paper.circle(waypoint.x + offset, waypoint.y + offset, 10);
+  				var circle = paper.circle((waypoint.x*8) + offset, (waypoint.y*8) + offset, 5);
   				circle.attr("fill", "49AFCD");
-  				circle.attr("stroke", "#fff");  				
+  				circle.attr("stroke", "#49AFCD");  				
   				//console.log("Point: " + waypoint.x);
   			};  			
   			
